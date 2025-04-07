@@ -121,8 +121,6 @@ async def check_url(url, *, check_cert=True):
                 break
             rexc = rexc.__cause__
         status = rexc or exc
-    except ssl.CertificateError as exc:
-        status = exc
     except aiohttp.ClientError as exc:
         status = exc
     except misc_aiohttp_errors as exc:  # pylint: disable=catching-non-exception

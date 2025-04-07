@@ -29,8 +29,6 @@ sed -e 's/^/# /' <<< "$out"
 case $out in
     '<stdin>:1: ['*'[SSL: CERTIFICATE_VERIFY_FAILED]'*'] https://wrong.host.badssl.com/')
         echo ok 3;;
-    '<stdin>:1: ['*'[CertificateError:'*']] https://wrong.host.badssl.com/')
-        echo ok 3;;
     "<stdin>:1: [hostname 'wrong.host.badssl.com' doesn't match "*"] https://wrong.host.badssl.com/")
         echo ok 3;;
     *)
